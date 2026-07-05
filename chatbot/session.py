@@ -11,19 +11,13 @@ from typing import Any
 
 
 class SessionManager:
-    """
-    Manage chat history.
-    On Vercel, history is kept only in memory because the filesystem
-    is read-only.
-    """
+    """Manage chat history."""
 
     def __init__(self, path: str | Path = "chatbot/data/chat_history.json") -> None:
         self.path = Path(path)
         self._memory_history: list[dict[str, Any]] = []
 
     def load(self) -> list[dict[str, Any]]:
-        """Load history."""
-
         try:
             if self.path.exists():
                 with self.path.open("r", encoding="utf-8") as f:
@@ -34,11 +28,6 @@ class SessionManager:
         return self._memory_history
 
     def save(self, history: list[dict[str, Any]]) -> None:
-        """
-        Save history.
-        On Vercel this silently falls back to memory.
-        """
-
         self._memory_history = history
 
         try:
@@ -51,26 +40,29 @@ class SessionManager:
             # Read-only filesystem (Vercel)
             pass
 
-        except Exception:
-            pass
-
-    def append(self, user: str, bot: str) -> None:
-        """Append a conversation."""
+    def append(
+        self,
+        role: str,
+        message: str,
+        mode: str | None = None,
+        provider: str | None = None,
+    ) -> None:
+        """Append a single message."""
 
         history = self.load()
 
         history.append(
             {
-                "user": user,
-                "bot": bot,
+                "role": role,
+                "message": message,
+                "mode": mode,
+                "provider": provider,
             }
         )
 
         self.save(history)
 
     def clear(self) -> None:
-        """Clear history."""
-
         self._memory_history = []
 
         try:
