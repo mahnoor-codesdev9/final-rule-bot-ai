@@ -1,0 +1,18 @@
+[
+  "test_api.py::test_ai_mode_falls_back_without_provider_keys",
+  "test_api.py::test_chat_endpoint_keeps_existing_contract",
+  "test_api.py::test_health_endpoint",
+  "test_api.py::test_history_and_stats_endpoints",
+  "test_api.py::test_settings_endpoint_hides_secrets",
+  "test_bot.py::TestChatBot::test_bot_created",
+  "test_bot.py::TestChatBot::test_command_counter",
+  "test_bot.py::TestChatBot::test_message_counter",
+  "test_bot.py::TestMatcher::test_known_response",
+  "test_bot.py::TestMatcher::test_unknown_response",
+  "test_bot.py::TestUtils::test_empty_input",
+  "test_bot.py::TestUtils::test_normalize_input",
+  "test_bot.py::TestUtils::test_word_count",
+  "test_gemini_provider.py::TestGeminiProviderManager::test_generate_raises_when_no_provider",
+  "test_gemini_provider.py::TestGeminiProviderManager::test_generate_uses_gemini",
+  "test_gemini_provider.py::TestGeminiProviderManager::test_provider_availability"
+]

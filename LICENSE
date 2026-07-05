@@ -1,0 +1,59 @@
+
+---
+
+# 2️⃣ .gitignore
+
+```gitignore
+# Bytecode
+
+__pycache__/
+
+*.py[cod]
+
+*$py.class
+
+# Virtual Environment
+
+.venv/
+
+venv/
+
+env/
+
+# VS Code
+
+.vscode/
+
+# PyCharm
+
+.idea/
+
+# Logs
+
+*.log
+
+chatbot/logs/*.log
+
+# Pytest
+
+.pytest_cache/
+
+.coverage
+
+# OS Files
+
+.DS_Store
+
+Thumbs.db
+
+# Build
+
+build/
+
+dist/
+
+*.egg-info/
+
+# Environment
+
+.env

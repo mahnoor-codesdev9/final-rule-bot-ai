@@ -1,0 +1,83 @@
+{
+    "greeting": [
+        "hello",
+        "hi",
+        "hey",
+        "hello bot",
+        "hi bot",
+        "hey bot",
+        "good morning",
+        "good afternoon",
+        "good evening"
+    ],
+
+    "goodbye": [
+        "bye",
+        "goodbye",
+        "see you",
+        "see you later",
+        "exit",
+        "quit"
+    ],
+
+    "thanks": [
+        "thanks",
+        "thank you",
+        "thankyou",
+        "thx",
+        "thanks a lot",
+        "many thanks"
+    ],
+
+    "python": [
+        "python",
+        "python language",
+        "learn python",
+        "python programming"
+    ],
+
+    "github": [
+        "github",
+        "git",
+        "git repository",
+        "version control"
+    ],
+
+    "oop": [
+        "oop",
+        "oops",
+        "object oriented programming",
+        "classes",
+        "objects"
+    ],
+
+    "database": [
+        "database",
+        "sql",
+        "mysql",
+        "postgresql",
+        "sqlite"
+    ],
+
+    "api": [
+        "api",
+        "rest api",
+        "web api",
+        "endpoint"
+    ],
+
+    "career": [
+        "resume",
+        "cv",
+        "portfolio",
+        "interview",
+        "job"
+    ],
+
+    "motivation": [
+        "motivate me",
+        "motivation",
+        "encourage me",
+        "i feel tired"
+    ]
+}

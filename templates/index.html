@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="RuleBot AI premium SaaS assistant">
+    <title>RuleBot AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-8TSWVx9ZiqAqAY8NLwI3QhK7xSSozrBNQ0Q4TP1G2sWUJZTTYGRUzgFvNVCp4QF8ohQcgrCzVJJnZ81XqQl9aw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="dark">
+    <div class="page-shell" aria-live="polite">
+        <div class="page-background" aria-hidden="true"></div>
+        <div class="gradient-overlay" aria-hidden="true"></div>
+        <div class="aurora" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <aside class="sidebar" aria-label="Primary navigation">
+            <div class="sidebar-brand">
+                <div class="brand-mark">RB</div>
+                <div>
+                    <p class="brand-label">RuleBot AI</p>
+                    <p class="brand-subtitle">Professional hybrid assistant</p>
+                </div>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="sidebar-panel">
+                    <div class="panel-heading">
+                        <p>Active mode</p>
+                        <span id="ai-status">Rule</span>
+                    </div>
+                <div class="segmented-control" role="radiogroup" aria-label="Select assistant mode">
+                    <button class="segment is-active" data-mode="rule" type="button">Rule</button>
+                    <button class="segment" data-mode="auto" type="button">Auto</button>
+                    <button class="segment" data-mode="ai" type="button">AI</button>
+                </div>
+
+                <label class="field">
+                    <span>Provider</span>
+                    <select id="provider" aria-label="Select AI provider">
+                        <option value="">Best available</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="groq">Groq</option>
+                        <option value="openrouter">OpenRouter</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="sidebar-panel">
+                <div class="panel-heading">
+                    <p>Search chat</p>
+                </div>
+                <label class="search-box" for="search">
+                    <span aria-hidden="true">/</span>
+                    <input id="search" type="search" placeholder="Search current chat" autocomplete="off">
+                </label>
+            </div>
+
+            <div class="sidebar-panel sidebar-actions">
+                <button id="new-chat" class="button button-primary" type="button">New conversation</button>
+                <button id="import-chat" class="button button-secondary" type="button">Import chat</button>
+                <input id="import-file" type="file" accept="application/json,text/plain" hidden>
+            </div>
+
+            <div class="sidebar-panel sidebar-summary">
+                <div class="panel-heading">
+                    <p>Session summary</p>
+                    <span id="uptime">0s</span>
+                </div>
+                <div class="metric-grid">
+                    <div class="metric"><span>Total</span><strong id="total">0</strong></div>
+                    <div class="metric"><span>User</span><strong id="user">0</strong></div>
+                    <div class="metric"><span>Bot</span><strong id="bot">0</strong></div>
+                    <div class="metric"><span>AI</span><strong id="ai-count">0</strong></div>
+                </div>
+            </div>
+
+            <div class="sidebar-panel sidebar-export">
+                <div class="panel-heading">
+                    <p>Export history</p>
+                </div>
+                <div class="export-grid">
+                    <button id="export-txt" class="button button-tertiary" type="button">TXT</button>
+                    <button id="export-md" class="button button-tertiary" type="button">Markdown</button>
+                    <button id="export-pdf" class="button button-tertiary" type="button">PDF</button>
+                </div>
+            </div>
+        </div>
+        </aside>
+
+        <main class="chat-panel">
+            <header class="chat-header">
+                <div>
+                    <p class="eyebrow">Premium AI workspace</p>
+                    <h1>RuleBot AI</h1>
+                    <p class="hero-copy">A polished hybrid assistant for engineering workflows, interview prep, and career guidance.</p>
+                </div>
+                <div class="chat-actions">
+                    <button id="shortcuts-toggle" class="icon-button" type="button" aria-label="Keyboard shortcuts"><img src="/static/icons/copy.svg" alt="Shortcuts"/></button>
+                    <button id="settings-toggle" class="icon-button" type="button" aria-label="Open settings"><img src="/static/icons/copy.svg" alt="Settings"/></button>
+                    <button id="theme-toggle" class="icon-button" type="button" aria-label="Toggle theme"><img id="theme-icon" src="/static/icons/theme.svg" alt="Theme"/></button>
+                    <button id="clear-chat" class="icon-button" type="button" aria-label="Clear chat"><img src="/static/icons/trash.svg" alt="Clear"/></button>
+                </div>
+            </header>
+
+            <section class="chat-status">
+                <div class="status-pill" aria-live="polite">Online · AI ready</div>
+                <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
+                    <span></span><span></span><span></span>
+                </div>
+            </section>
+
+            <section id="messages" class="messages" aria-label="Conversation thread"></section>
+
+            <form id="chat-form" class="composer" novalidate>
+                <textarea id="message" rows="1" placeholder="Ask RuleBot anything..." autocomplete="off" maxlength="4000" aria-label="Type your message"></textarea>
+                <div class="composer-actions">
+                    <button id="voice-input" class="button button-secondary" type="button" aria-label="Start voice input"><img src="/static/icons/mic.svg" alt="Voice"/></button>
+                    <button id="attach-button" class="button button-secondary" type="button"><img src="/static/icons/attach.svg" alt="Attach"/></button>
+                    <button id="send" class="button button-primary" type="submit"><img src="/static/icons/send.svg" alt="Send"/><span class="visually-hidden">Send</span></button>
+                </div>
+            </form>
+        </main>
+
+        <aside id="settings-panel" class="drawer" aria-label="Settings panel" hidden>
+            <div class="drawer-header">
+                <div>
+                    <h2>Settings</h2>
+                    <p>Customize your workspace and accessibility.</p>
+                </div>
+                <button class="icon-button" id="settings-close" type="button" aria-label="Close settings">✕</button>
+            </div>
+            <div class="setting-group">
+                <label class="toggle-row">
+                    <span>Compact messages</span>
+                    <input id="compact-toggle" type="checkbox">
+                </label>
+                <label class="toggle-row">
+                    <span>Voice output</span>
+                    <input id="voice-toggle" type="checkbox">
+                </label>
+                <label class="field">
+                    <span>Message width</span>
+                    <input id="width-range" type="range" min="58" max="90" value="76">
+                </label>
+            </div>
+            <div class="provider-list">
+                <h3>Providers</h3>
+                <p id="provider-status">Loading provider status...</p>
+            </div>
+        </aside>
+
+        <dialog id="shortcuts-dialog" aria-modal="true" hidden>
+            <div class="dialog-header">
+                <h2>Keyboard shortcuts</h2>
+                <button id="shortcuts-close" class="icon-button" type="button" aria-label="Close shortcuts">✕</button>
+            </div>
+            <div class="shortcut-grid">
+                <span>Send</span><kbd>Enter</kbd>
+                <span>New line</span><kbd>Shift + Enter</kbd>
+                <span>Search chat</span><kbd>Ctrl + K</kbd>
+                <span>Toggle theme</span><kbd>Ctrl + J</kbd>
+                <span>Clear chat</span><kbd>Ctrl + Shift + X</kbd>
+            </div>
+        </dialog>
+
+        <dialog id="confirm-dialog" aria-modal="true" hidden>
+            <div class="dialog-header">
+                <h2>Confirm clear chat</h2>
+                <button id="confirm-close" class="icon-button" type="button" aria-label="Close dialog">✕</button>
+            </div>
+            <p>Are you sure you want to clear the current conversation history? This cannot be undone.</p>
+            <div class="dialog-actions">
+                <button id="cancel-clear" class="button button-secondary" type="button">Cancel</button>
+                <button id="confirm-clear" class="button button-danger" type="button">Clear</button>
+            </div>
+        </dialog>
+
+        <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-Xa1V3c4C8smQm2Xh7eJBOeIzYSTbE8b7aI9cBQztFfbBJsP1iyWbQd5xRju/o5IWx3pFReEmFgg8p3qyT7g2jg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js" integrity="sha512-H2jGv032ZZp5L2X0WCoaF5r1hE1J9tS8u57QHfCKCjXWk3PTf1x4Lip7Ygld+qtfgE9Z5qT9F6cBwPqIgX0z8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/js/theme.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>

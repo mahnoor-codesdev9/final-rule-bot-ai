@@ -1,0 +1,40 @@
+{
+    "hello": "Hello! How can I help you today?",
+    "hi": "Hi! Nice to meet you.",
+    "hey": "Hey! Hope you're having a wonderful day.",
+    "good morning": "Good morning! Ready to start coding?",
+    "good afternoon": "Good afternoon! How can I assist you?",
+    "good evening": "Good evening! What can I do for you?",
+
+    "who are you": "I am RuleBot AI, a professional rule-based chatbot built with Python.",
+    "what is your name": "My name is RuleBot AI.",
+    "who made you": "I was created as a professional software engineering project.",
+    "what can you do": "I can answer predefined questions, execute commands, and demonstrate rule-based artificial intelligence.",
+
+    "python": "Python is a powerful programming language used for AI, web development, automation, data science and scripting.",
+    "github": "GitHub is a platform for version control and software collaboration using Git.",
+    "git": "Git is a distributed version control system that tracks changes in source code.",
+    "oop": "Object-Oriented Programming organizes software into reusable classes and objects.",
+    "software engineering": "Software engineering focuses on designing, developing, testing and maintaining software.",
+    "clean code": "Clean code is readable, maintainable and easy to understand.",
+    "api": "An API allows different software applications to communicate with each other.",
+    "database": "A database stores and manages information efficiently.",
+
+    "portfolio": "A strong portfolio demonstrates practical skills through real-world projects.",
+    "resume": "A resume summarizes your education, skills and experience.",
+    "interview": "Preparation, communication and practical knowledge are essential for technical interviews.",
+
+    "motivate me": "Success comes from consistency. Keep building projects every day.",
+    "i feel tired": "Take a short break, recharge and continue learning.",
+    "i want to learn python": "The fastest way to learn Python is by building real projects.",
+
+    "tell me a joke": "Why do programmers prefer dark mode? Because light attracts bugs.",
+    "favorite language": "Python is one of my favorite programming languages.",
+
+    "thanks": "You're welcome!",
+    "thank you": "Happy to help!",
+    "thankyou": "Anytime!",
+
+    "bye": "Goodbye! Have a wonderful day.",
+    "goodbye": "See you next time."
+}

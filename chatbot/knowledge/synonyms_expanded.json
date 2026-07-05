@@ -1,0 +1,188 @@
+{
+  "algorithms": [
+    "algorithms"
+  ],
+  "artificial intelligence": [
+    "ai",
+    "artificial intelligence"
+  ],
+  "authentication": [
+    "authentication"
+  ],
+  "authorization": [
+    "authorization"
+  ],
+  "c": [
+    "c"
+  ],
+  "c++": [
+    "c++"
+  ],
+  "career guidance": [
+    "career advice",
+    "career guidance"
+  ],
+  "chatgpt": [
+    "chat gpt",
+    "chatgpt",
+    "gpt"
+  ],
+  "cloud computing": [
+    "cloud computing"
+  ],
+  "computer networks": [
+    "computer networks"
+  ],
+  "cover letters": [
+    "cover letters"
+  ],
+  "css": [
+    "css"
+  ],
+  "cv building": [
+    "cv",
+    "cv building"
+  ],
+  "cyber security": [
+    "cyber security",
+    "cybersecurity",
+    "infosec"
+  ],
+  "data structures": [
+    "data structures"
+  ],
+  "dbms": [
+    "database",
+    "databases",
+    "dbms"
+  ],
+  "deep learning": [
+    "deep learning",
+    "dl"
+  ],
+  "django": [
+    "django"
+  ],
+  "docker": [
+    "docker"
+  ],
+  "fastapi": [
+    "fastapi"
+  ],
+  "flask": [
+    "flask"
+  ],
+  "gemini": [
+    "gemini"
+  ],
+  "general conversation": [
+    "general conversation"
+  ],
+  "generative ai": [
+    "gen ai",
+    "genai",
+    "generative ai"
+  ],
+  "git": [
+    "git"
+  ],
+  "github": [
+    "github"
+  ],
+  "greetings": [
+    "greetings"
+  ],
+  "hr interview questions": [
+    "hr interview questions"
+  ],
+  "html": [
+    "html"
+  ],
+  "http": [
+    "http",
+    "https"
+  ],
+  "java": [
+    "java"
+  ],
+  "javascript": [
+    "javascript"
+  ],
+  "json": [
+    "json"
+  ],
+  "jwt": [
+    "jwt"
+  ],
+  "linkedin optimization": [
+    "linkedin optimization"
+  ],
+  "linux": [
+    "linux"
+  ],
+  "machine learning": [
+    "machine learning",
+    "ml"
+  ],
+  "mongodb": [
+    "mongodb"
+  ],
+  "mysql": [
+    "mysql"
+  ],
+  "nlp": [
+    "nlp"
+  ],
+  "node.js": [
+    "node",
+    "node.js",
+    "nodejs"
+  ],
+  "oauth": [
+    "oauth"
+  ],
+  "oop": [
+    "object oriented programming",
+    "oop"
+  ],
+  "operating systems": [
+    "operating systems"
+  ],
+  "python": [
+    "python"
+  ],
+  "react basics": [
+    "react",
+    "react basics",
+    "react.js",
+    "reactjs"
+  ],
+  "rest apis": [
+    "rest api",
+    "rest apis"
+  ],
+  "resume writing": [
+    "resume",
+    "resume writing"
+  ],
+  "software engineering": [
+    "software engineering"
+  ],
+  "sql": [
+    "sql"
+  ],
+  "technical interview questions": [
+    "interview",
+    "interview questions",
+    "technical interview questions"
+  ],
+  "typescript": [
+    "typescript"
+  ],
+  "web development": [
+    "web development"
+  ],
+  "windows": [
+    "windows"
+  ]
+}

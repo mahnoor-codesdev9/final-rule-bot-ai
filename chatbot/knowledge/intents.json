@@ -1,0 +1,56 @@
+{
+    "greeting": [
+        "hello",
+        "hi",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening"
+    ],
+
+    "identity": [
+        "who are you",
+        "what is your name",
+        "who made you",
+        "what can you do"
+    ],
+
+    "programming": [
+        "python",
+        "github",
+        "git",
+        "oop",
+        "software engineering",
+        "clean code",
+        "api",
+        "database"
+    ],
+
+    "career": [
+        "portfolio",
+        "resume",
+        "interview"
+    ],
+
+    "motivation": [
+        "motivate me",
+        "i feel tired",
+        "i want to learn python"
+    ],
+
+    "fun": [
+        "tell me a joke",
+        "favorite language"
+    ],
+
+    "gratitude": [
+        "thanks",
+        "thank you",
+        "thankyou"
+    ],
+
+    "farewell": [
+        "bye",
+        "goodbye"
+    ]
+}

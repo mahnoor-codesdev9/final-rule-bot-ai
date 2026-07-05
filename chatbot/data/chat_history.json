@@ -1,0 +1,72 @@
+[
+    {
+        "sender": "user",
+        "message": "hello",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:18:07.351325+00:00"
+    },
+    {
+        "sender": "bot",
+        "message": "Hello! How can I help you today?",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:18:07.387117+00:00"
+    },
+    {
+        "sender": "user",
+        "message": "write a python program to print hello world.",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:18:36.161670+00:00"
+    },
+    {
+        "sender": "bot",
+        "message": "Python is a powerful, high-level programming language known for readable syntax, widely used for AI, web development, automation, data science, and scripting.",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:18:36.191511+00:00"
+    },
+    {
+        "sender": "user",
+        "message": "explain artificial intelligence in detail including: - definition - history - applications - advantages - disadvantages - future scope",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:18:58.899479+00:00"
+    },
+    {
+        "sender": "bot",
+        "message": "Artificial Intelligence (AI) is the broad field of building systems that perform tasks normally requiring human intelligence, such as understanding language, recognizing images, or making decisions.",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:18:58.940684+00:00"
+    },
+    {
+        "sender": "user",
+        "message": "asdfghjkl $$$$$$ 123456789 ??????????? ...........",
+        "mode": "ai",
+        "provider": "gemini",
+        "timestamp": "2026-07-05T12:19:24.302341+00:00"
+    },
+    {
+        "sender": "bot",
+        "message": "I'm sorry, I don't understand your request. Could you please rephrase it?",
+        "mode": "ai",
+        "provider": "gemini",
+        "timestamp": "2026-07-05T12:19:24.344161+00:00"
+    },
+    {
+        "sender": "user",
+        "message": "ai explain karo urdu mein.",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:19:41.348306+00:00"
+    },
+    {
+        "sender": "bot",
+        "message": "Artificial Intelligence (AI) is the broad field of building systems that perform tasks normally requiring human intelligence, such as understanding language, recognizing images, or making decisions.",
+        "mode": "rule",
+        "provider": null,
+        "timestamp": "2026-07-05T12:19:41.384397+00:00"
+    }
+]
